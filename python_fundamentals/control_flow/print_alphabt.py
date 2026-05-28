@@ -1,2 +1,3 @@
 #!/usr/bin/env python3
-print("{}".format("".join(c for c in "abcdefghijklmnopqrstuvwxyz" if c not in "qe")), end="")
+result = "".join(c for c in "abcdefghijklmnopqrstuvwxyz" if c not in "qe")
+print("{}".format(result), end="")
