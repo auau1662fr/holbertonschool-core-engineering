@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 def islower(c):
     """Return True if c is lowercase, False otherwise."""
     return ord('a') <= ord(c) <= ord('z')
