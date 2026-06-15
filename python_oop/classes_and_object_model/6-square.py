@@ -19,7 +19,7 @@ class Square:
     def size(self, value):
         """Setter for size with validation"""
         if not isinstance(value, int):
-            raise TypeError("size must be an integer")
+            raise TypeError("size must be an integers")
         if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
@@ -36,7 +36,7 @@ class Square:
                 or not isinstance(value[0], int)
                 or not isinstance(value[1], int)
                 or value[0] < 0 or value[1] < 0):
-            raise TypeError("position must be a tuple of 2 positive integer")
+            raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
     def area(self):
