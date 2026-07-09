@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """WebSocket client"""
 import asyncio
+import sys
 import websockets
 
 
@@ -14,7 +15,9 @@ async def connect_and_send(uri: str, text: str) -> str:
 
 async def main():
     """Send a message to the echo server and print the response"""
-    response = await connect_and_send("ws://localhost:8765", "Hello WebSocket")
+    port = sys.argv[1] if len(sys.argv) > 1 else "8765"
+    uri = f"ws://localhost:{port}"
+    response = await connect_and_send(uri, "Hello WebSocket")
     print(response, end="")
 
 
